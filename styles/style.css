@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 100%;
+    position:fixed;
+    z-index: 100;
+    background-color: white;
+    padding: 18px;
+    margin: 0;
+    height: 100px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size:large
+}
+nav.navbar-pinterest {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+nav.navbar-pinterest div{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.btn-black {
+    background: black;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 50px;
+}
+
+.main-input {
+    display: flex;
+    flex-direction: row;
+    width: 740px;
+    height: 61px;
+    border-radius: 50px;
+    background: #e9e9e9;
+    align-items:center;
+    gap:10px;
+}
+.main-input div.main-input-container{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.main-input input{
+    width: 450px;
+    height: 61px;
+    border: transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.main-input:hover{
+    box-shadow: 0 1px 1px 0 #5b5d6347;
+}
+::placeholder{
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-weight:normal
+}
+
+div img.icon-top{
+    height: 30px;
+}
+div .user{
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+}
+div .arrow-down {
+    box-align: center;
+    height: 16px;
+}
+/*Card-image*/
+.content{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 54px;
+    align-items: flex-start;
+    gap: 10px;
+}
+.column .card-image{
+    position: relative;
+    height:fit-content;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    width: 295px;
+}
+div.card-image img.img-p{
+    border-radius: 20px;
+    width: 295px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    display: flex;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background:rgba(27, 27, 27, 0.411)
+}
+
+.overlay a.btn-red{
+    display: flex;
+    border-radius: 50px;
+    color: white;
+    background-color: #cc0000;
+    font-family: 'Raleway', sans-serif;
+    font-size:large;
+    font-weight:bold;
+    letter-spacing: 1px;
+    padding: 20px 15px;
+    align-self: self-start;
+    margin: 15px;
+}
+
+.overlay div.icon{
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 10px;
+    align-items: self-end;
+    justify-content: flex-end;
+    transform:translate(0)
+}   
+.overlay div.icon img{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 253, 253, 0.575);
+    border-radius: 100%;
+    padding: 8px;
+    align-items: flex-start;
+
+}
+.card-image:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    header{
+        display: flex;
+        height: 100px;
+    } 
+    .content{
+        display: flex;
+        padding: 100px 30px;
+    }
+
+    nav.navbar-pinterest{
+        justify-content: space-between;
+        align-items: center;
+        width: 880px;
+    }
+    .main-input {
+        width: 300px;
+        height: 61px;
+        border-radius: 50px;
+        gap:10px;
+    }
+    .main-input input{
+        width: 280px;
+        height: 61px;
+        border: transparent;
+        background-color: transparent;
+        outline: none;
+    }
+    .main-input div.main-input-container{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .card-image:hover .overlay{
+        height: 100%;
+        cursor:pointer;
+        border-radius: 20px;
+    }
+    
+}
